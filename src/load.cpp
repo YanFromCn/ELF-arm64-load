@@ -68,7 +68,7 @@ extern "C" {
  __u64 load(Elf64_auxv_t* auxv)
  {
 
-   int linker_fd = elf_mmap(_open("/system/bin/am",O_RDONLY), auxv);
+   int linker_fd = elf_mmap(_open("/system/bin/sh",O_RDONLY), auxv); // /system/bin/sh load
   
    int size = _lseek(linker_fd, 0, SEEK_END);
 
